@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
+
+
+.size{
+    height: 250px;
+    width: 200px;
+}
+
+i{
+    background: transparent;
+}
+.btn-chec{
+    background-color: yellow;
+    color: back;
+    border: 1px solic black;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.card{
+    background-color: lightblue;
+}
+
+.correct{
+    background-color: rgb(2, 221, 2) ;
+}
+
+
+.timer{
+    font-family: "star-wars";
+    color: black;
+    font-size: 20pt;
+    float: right;
+        
+}
+
+@font-face{
+    font-family: "star-wars";
+    src: url("./assets/Death_Star.otf");
+  
+}
+

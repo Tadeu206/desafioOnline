@@ -1,0 +1,57 @@
+
+
+<div class="container-fluid background ">
+  <div class="row">
+    <div>
+      <img width="100" alt="Darth Vader Logo" src="../assets/img/logo_dark_vader.png">
+    </div>
+    <div class="marginStartQuiz">
+      <h1 class="startQuiz">Start Quiz!</h1>
+    </div>
+    <div class="marginTimer">
+      <div class="row">
+        <div class="col-md-6">
+          <app-timer (onEndTimer)="endOfTheGame()"></app-timer> 
+        </div>
+        <div class="col-md-6">
+          <button type="button" (click)="voltarHome()"  class="btn btn-outline-dark botaoHome"><i class="fa fa-home"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div 
+      *ngFor="let person of topRow" class="card col mar" style="width: 18rem;">
+      <img class="card-img-top size" src="{{person.pic}}" alt="Card img cap">
+     <div class="row">
+     <button type="button" (click)="infoPeople(person)" class="btn btn-info form-control col-md-2" >?</button>
+     <input [disabled]="person.blockConfirm" type="text" class="form-control col-md-8" [(ngModel)]="person.resp">
+      <button (click)="verResposta(person)" [disabled]="!person.resp || person.blockConfirm"
+       class="btn btn-outline-success btn-check col-md-2"><i class="fa fa-check"></i></button>
+      </div>
+   </div>
+  </div>
+
+  <div class="row">
+      <div 
+        *ngFor="let person of bottomRow" class="card col b mar  " style="width: 18rem;">
+        <img class="card-img-top size" src="{{person.pic}}" alt="Card img cap">
+        <div class="row">
+            <button type="button" (click)="infoPeople(person)" class="btn btn-info form-control col-md-2" >?</button>
+            <input [disabled]="person.blockConfirm" type="text" class="form-control col-md-8" [(ngModel)]="person.resp">
+            <button (click)="verResposta(person)" [disabled]="!person.resp || person.blockConfirm"
+            class="btn btn-outline-success btn-check col-md-2"><i class="fa fa-check"></i></button>
+        </div>
+      </div>
+    </div>
+
+  <div class="textoB">
+    <button *ngIf="previous != null" (click)="changePages(previous)" class="btn btn-info s">Pagina Anterior</button>
+    <button *ngIf="next != null" (click)="changePages(next)" class="btn btn-info s" >Proxima Pagina</button>
+  </div>
+  
+
+</div>
