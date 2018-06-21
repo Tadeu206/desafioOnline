@@ -8,8 +8,8 @@ import {HttpClient} from '@angular/common/http';
 export class FotoService {
 
   private baseUrl = "https://www.googleapis.com/customsearch/v1?q=";
-  private apiKey = "key=AIzaSyDndFyiWA_E4xcPatLAn4UNcc8vW1Dv0Gg"
-  private cxKey = "cx=016531454908138522902%3Aq8ej-vaxd7c&"
+  private apiKey = "Your API key"
+  private cxKey = "Your cx Key"
   private endUrl = "searchType=image&fields=items%2Flink&" 
   
 
